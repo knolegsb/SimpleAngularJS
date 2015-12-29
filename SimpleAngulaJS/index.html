@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple AngularJS</title>
+	<meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+</head>
+<body ng-app="myApp" style="font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif">
+    <h1 ng-controller="simpleController">{{simpleMessage}}</h1>
+
+    <script>
+        var myApp = angular.module('myApp', []);
+
+        myApp.controller('simpleController', function ($scope) {
+            $scope.simpleMessage = "This is a simple AngularJS on " + (new Date()).toDateString();
+        });
+    </script>
+</body>
+</html>
